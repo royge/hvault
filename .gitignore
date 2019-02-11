@@ -1,0 +1,6 @@
+.envrc
+vault.conf
+vault.service
+data/
+*.swp
+keys
