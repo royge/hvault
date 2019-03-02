@@ -38,34 +38,26 @@ On other terminal window run the following steps.
 
 You should do the preparation steps prior to this step.
 
-    ```
     $ vault write secret/whatever key=value
-    ```
 
-    If writing a file prepend `@` to the value. Example: key=@value where value
-    is the filename.
+If writing a file prepend `@` to the value. Example: key=@value where value
+is the filename.
 
 ## Reading your secrets from CLI
 
 You should do the preparation steps prior to this step.
 
-    ```
     $ vault read secret/whatever
-    ```
 
 ## Deleting your secrets from CLI
 
 You should do the preparation steps prior to this step.
 
-    ```
     $ vault delete secret/whatever
-    ```
 
 ## Listing your secrets from CLI
 
 You should do the preparation steps prior to this step.
 
-    ```
     $ vault list secret
-    ```
 
