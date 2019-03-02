@@ -1,4 +1,4 @@
-# Using Vault
+# My Personal Vault Configuration
 
 ## Pre-requisites
 
@@ -6,10 +6,6 @@
 - [docker-compose](https://github.com/docker/compose)
 
 ## Run Vault Server
-
-1. Create configuration file
-
-    `$ cp config/vault.hcl.dist config/vault.hcl`
 
 1. Run the server
 
@@ -31,7 +27,7 @@ On other terminal window run the following steps.
 1. Add `VAULT_TOKEN` environment variable with the value of your `root token`.
 
     ```
-    $ export VAULT_TOKEN=776af540-c9d0-45b2-8b48-8d85cb4d1b9b
+    $ export VAULT_TOKEN=<your-root-token>
     ```
 
 ## Writing your secrets from CLI
