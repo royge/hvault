@@ -6,6 +6,6 @@ services:
     cap_add:
       - IPC_LOCK
     volumes:
-      - /Users/roye/vault/:/vault/
+      - .:/vault/
     ports:
       - 127.0.0.1:8200:8200
