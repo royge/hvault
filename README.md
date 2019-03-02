@@ -61,3 +61,7 @@ You should do the preparation steps prior to this step.
 
     $ vault list secret
 
+## Learn More
+
+To learn more about hashicorp vault visit the official
+[documentation](https://www.vaultproject.io/docs/).
