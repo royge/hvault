@@ -1,6 +1,7 @@
 .envrc
 vault.conf
 vault.service
+logs/
 data/
 *.swp
 keys

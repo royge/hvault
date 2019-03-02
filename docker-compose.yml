@@ -1,0 +1,11 @@
+version: '3'
+services:
+  vault:
+    image: vault:1.0.3
+    entrypoint: vault server -config=/vault/config/vault.hcl
+    cap_add:
+      - IPC_LOCK
+    volumes:
+      - /Users/roye/vault/:/vault/
+    ports:
+      - 127.0.0.1:8200:8200

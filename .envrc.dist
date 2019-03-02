@@ -1,5 +1,0 @@
-export VAULT_ADDR=<vault-url>
-export VAULT_TOKEN=<your-vault-token>
-export KEY1=<first-key>
-export KEY2=<second-key>
-export KEY3=<third-key>

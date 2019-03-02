@@ -1,27 +1,24 @@
-# My Personal Vault
+# Using Vault
 
-I use [vault](https://www.vaultproject.io) to manage my secret keys.
+## Pre-requisites
 
-## Install vault
+- [docker](https://www.docker.com/)
+- [docker-compose](https://github.com/docker/compose)
 
-Currently latest stable version is `0.10.2`.
+## Run Vault Server
 
-1. Download [vault](https://www.vaultproject.io/downloads.html)
+1. Create configuration file
 
-    `$ wget https://releases.hashicorp.com/vault/0.10.2/vault_0.10.2_linux_amd64.zip`
+    `$ cp config/vault.hcl.dist config/vault.hcl`
 
-1. Extract and install
+1. Run the server
 
-    `$ unzip vault_0.10.2_linux_amd64.zip`
-    `$ sudo mv vault /usr/local/bin/`
+    `$ docker-compose up -d`
 
-## Run Server
+1. Open [Vault UI](http://127.0.0.1:8200) in your browser and follow the instructions. Don't forget to
+   download the keys.
 
-We need to run the server as administrator because of mlock.
-
-`$ sudo vault server -config=vault.conf`
-
-## Preparation
+## How to Use from CLI
 
 On other terminal window run the following steps.
 
@@ -31,30 +28,13 @@ On other terminal window run the following steps.
     $ export VAULT_ADDR=http://127.0.0.1:8200
     ```
 
-1. If first time, initialize vault.
-
-    ```
-    $ vault init
-    ```
-
-    Don't forget to save the generated keys.
-
-1. Unseal your vault.
-
-    You need to run the following commands three(3) times then provide
-    different unseal key in every iteration.
-
-    ```
-    $ vault unseal
-    ```
-
 1. Add `VAULT_TOKEN` environment variable with the value of your `root token`.
 
     ```
     $ export VAULT_TOKEN=776af540-c9d0-45b2-8b48-8d85cb4d1b9b
     ```
 
-## Writing your secrets
+## Writing your secrets from CLI
 
 You should do the preparation steps prior to this step.
 
@@ -65,7 +45,7 @@ You should do the preparation steps prior to this step.
     If writing a file prepend `@` to the value. Example: key=@value where value
     is the filename.
 
-## Reading your secrets
+## Reading your secrets from CLI
 
 You should do the preparation steps prior to this step.
 
@@ -73,7 +53,7 @@ You should do the preparation steps prior to this step.
     $ vault read secret/whatever
     ```
 
-## Deleting your secrets
+## Deleting your secrets from CLI
 
 You should do the preparation steps prior to this step.
 
@@ -81,7 +61,7 @@ You should do the preparation steps prior to this step.
     $ vault delete secret/whatever
     ```
 
-## Listing your secrets
+## Listing your secrets from CLI
 
 You should do the preparation steps prior to this step.
 

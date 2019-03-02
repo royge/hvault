@@ -1,9 +1,0 @@
-[Unit]
-Description=vault server
-
-[Service]
-Restart=on-failure
-ExecStart=/usr/local/bin/vault server -config=/home/ubuntu/vault/vault.conf
-
-[Install]
-WantedBy=multi-user.target
